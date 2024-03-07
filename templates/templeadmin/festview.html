@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>festival details view</title>
+    </head>
+    <body>
+        <center>
+            <h1>VIEW FESTIVAL</h1>
+            <table border="2">
+                <tr>
+                    <td>fest_id</td>
+                    <td>name</td>
+                    <td>time</td>
+                    <td>description</td>
+                </tr>
+                {% for j in data %}
+                <tr>
+                    <td>{{j.fest_id}}</td>
+                    <td>{{j.name}}</td>
+                    <td>{{j.time}}</td>
+                    <td>{{j.description}}</td>
+                    <td><a href="{%url 'festup' pk=j.fest_id %}">update</td>
+                    <td><a href="{%url 'festdel' pk=j.fest_id %}">delete</td>
+                   
+                    
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>vazhipadu details</title>
+    </head>
+    <form method="post">
+        {% csrf_token %}
+        <center>
+            <table border="2">
+            <h1>VAZHIPADU</h1>
+          <tr>
+           <td>NAME</td>
+            <td><input type="text" name="name" value="{{data.name}}"></td>
+            </tr>
+            <tr>
+            <td>PRICE</td>
+            <td><input type="text" name="price" value="{{data.price}}"></td>
+            </tr>
+            <tr>
+            <td><input type="submit" value="update"></td>
+            </tr>
+        </table>
+        </center>
+    </form>
+</html>

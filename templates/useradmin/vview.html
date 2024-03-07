@@ -1,0 +1,32 @@
+{% extends 'useradmin/layout/index.html' %}
+{% load static %}
+{% block body_vazhi %}
+<html>
+    <head>
+        <title>vazhipadu details view</title>
+    </head>
+    <body>
+        <center>
+            <h1 class="about_taital">Vazhipadu</h1>
+            <br/><br/>
+            <table border="2">
+                <tr>
+                    <td>vazhi_id</td>
+                    <td>name</td>
+                    <td>price</td>
+                </tr>
+                {% for j in data %}
+                <tr>
+                    <td>{{j.vazhi_id}}</td>
+                    <td>{{j.name}}</td>
+                    <td>{{j.price}}</td>
+                 
+                 
+                    
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>
+{% endblock %}

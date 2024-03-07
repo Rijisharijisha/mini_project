@@ -1,0 +1,37 @@
+
+{% extends 'useradmin/layout/index.html' %}
+{% load static %}
+{% block body_block %}
+<html>
+    <head>
+        <title>temple details view</title>
+    </head>
+    <body>
+        <center>
+            <h1>TEMPLE DETAILS </h1>
+            <table border="2">
+                <tr>
+                    <td>temp_id</td>
+                    <td>name</td>
+                    <td>address</td>
+                    <td>time</td>
+                    <td>contact</td>
+                </tr>
+                {% for j in data %}
+                <tr>
+                    <td>{{j.temp_id}}</td>
+                    <td>{{j.name}}</td>
+                    <td>{{j.address}}</td>
+                    <td>{{j.time}}</td>
+                    <td>{{j.contact}}</td>
+                    <td><a href="{%url 'update' pk=j.temp_id %}">update</td>
+                    <td><a href="{%url 'delete' pk=j.temp_id %}">delete</td>
+               
+
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>
+{% endblock %}

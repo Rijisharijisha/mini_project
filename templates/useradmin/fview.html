@@ -1,0 +1,35 @@
+{% extends 'useradmin/layout/index.html' %}
+{% load static %}
+{% block body_fest %}
+<html>
+    <head>
+        <title>festival details view</title>
+    </head>
+    <body>
+        <center>
+            <h1 class="about_taital">Festivals</h1>
+            <div class="bulit_icon"><img src="{% static 'useradmin/images/bulit-icon.png' %}"></div>
+            <br/>
+            <table border="2">
+                <tr>
+                    <td>fest_id</td>
+                    <td>name</td>
+                    <td>time</td>
+                    <td>description</td>
+                </tr>
+                {% for j in data %}
+                <tr>
+                    <td>{{j.fest_id}}</td>
+                    <td>{{j.name}}</td>
+                    <td>{{j.time}}</td>
+                    <td>{{j.description}}</td>
+                  
+                   
+                    
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>
+{% endblock %}

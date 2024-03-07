@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>festival details</title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <center>
+                <h1>FESTIVAL DETAILS</h1>
+                <table border="3">
+                    <tr>
+                <td>NAME</td>
+                <td><input type="text" name="name" value="{{data.name}}"></td>
+                    </tr>
+                    <tr>
+                <td>TIME</td>
+                <td><input type="time" name="time" value="{{data.time}}"></td>
+                </tr>
+                <tr>
+                <td>DESCRIPTION</td>
+                <td><textarea id="text" name="description" value="{{data.description}}"></textarea></td>
+                </tr>
+                <tr>
+                <td><input type="submit" value="update"></td>
+                </tr>
+            </table>
+            </center>
+        </form>
+    </body>
+</html>

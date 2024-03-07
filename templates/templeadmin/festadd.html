@@ -1,0 +1,25 @@
+
+<html>
+    <head>
+        <title>festival details</title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <center>
+                <h1>FESTIVAL DETAILS</h1>
+                NAME
+                <br>
+                <input type="text" name="name"><br><br>
+                TIME
+                <br>
+                <input type="time" name="time"><br><br>
+                DESCRIPTION
+                <br>
+                <textarea id="text" name="description"></textarea>
+                <br><br>
+                <input type="submit">
+            </center>
+        </form>
+    </body>
+</html>

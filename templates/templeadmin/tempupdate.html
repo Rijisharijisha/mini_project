@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>temple details</title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <center>
+                <table border="3">
+                    <tr>
+                <td>NAME</td>
+              <td><input type="text" name="name" value="{{data.name}}"></td>
+              </tr>
+              <tr>
+              <td>ADDRESS</td>
+              <td><input type="text" name="address" value="{{data.address}}"></td>
+              </tr>
+              <tr>
+              <td>OPENING TIME</td>
+              <td><input type="time" name="time" value="{{data.time}}"></td>
+              </tr>
+              <tr>
+              <td>CONTACT</td>
+              <td><input type="text" name="contact" value="{{data.contact}}"></td>
+              </tr>
+              <tr>
+              <td><input type="submit" value="update"></td>
+              </tr>
+            </table>
+            </center>
+        </form>
+    </body>
+</html>
+

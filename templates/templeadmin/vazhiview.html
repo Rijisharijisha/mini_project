@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>vazhipadu details view</title>
+    </head>
+    <body>
+        <center>
+            <h1>VAZHIPADU DETAILS</h1>
+            <table border="2">
+                <tr>
+                    <td>vazhi_id</td>
+                    <td>name</td>
+                    <td>price</td>
+                </tr>
+                {% for j in data %}
+                <tr>
+                    <td>{{j.vazhi_id}}</td>
+                    <td>{{j.name}}</td>
+                    <td>{{j.price}}</td>
+                    <td><a href="{%url 'vazhiup' pk=j.vazhi_id %}">update</td>
+                    <td><a href="{%url 'vazhidel' pk=j.vazhi_id %}">delete</td>
+                 
+                    
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>
